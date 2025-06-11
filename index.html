@@ -1,15 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>CSV Dashboard</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <title>Time Series Chart</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-  <h1>CSV Dashboard</h1>
-  <div id="table-container">Loading CSV...</div>
+  <div class="container">
+    <h1>Time Series Chart (CSV)</h1>
 
-  <script src="dashboard.js"></script>
+    <div class="filters">
+      <label>From: <input type="date" id="from-date"></label>
+      <label>To: <input type="date" id="to-date"></label>
+      <button onclick="filterData()">Apply Filter</button>
+    </div>
+
+    <canvas id="chart" width="800" height="400"></canvas>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
