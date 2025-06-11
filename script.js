@@ -2,7 +2,7 @@ let chart;
 let originalData = [];
 
 window.onload = function () {
-  fetch('data/data.csv')
+  fetch('data.csv')
     .then(response => response.text())
     .then(text => {
       const rows = text.trim().split('\n').slice(1); // skip header
